@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+            <div class="card border-0" style="width: 18rem;">
+                <div class="d-flex justify-content-center">
+                <img src="./../../assets/alessandro1.jpg" class="card-img-top rounded-circle w-75 h-25" alt="imagem angular">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title text-center">Alessandro N Sousa</h5>
+                  <p class="card-text text-center">Desenvolvedor Web</p>
+                  <a href="https://github.com/Alessandro-NSousa" target="_blank" class="btn btn-outline-dark d-flex justify-content-center">Github 
+                    <fa-icon [icon]="github"></fa-icon>
+                  </a>
+                  <hr class="mt-4 mb-4">
+                  <h6 class="mb-3 text-monospace text-center">Pesquisar por Título</h6>
+                  <input class="form-control mb-3 w-100" type="text">
+                  <button class="btn btn-outline-warning w-100">Pesquisar</button>               
+                </div>
+              </div> 
+        </div>
+
+        <div class="col-md-8">
+            <div>
+                <h3 class="text-center mb-4 text-monospace">Digite abaixo os seus comentários:</h3>
+
+                <div class="form-group">
+                    <label class="text-monospace" for="nome">Nome:</label>
+                    <input class="form-control mb-3" name="nome" id="nome" type="text" [(ngModel)]="post.nome" placeholder="Digite o seu nome">
+                </div>
+                <div class="form-group">
+                    <label class="text-monospace" for="mensagem">Mensagem:</label>
+                    <textarea class="form-control mb-4" name="mensagem" id="mensagem" cols="4" rows="10" [(ngModel)]="post.mensagem" placeholder="Digite a sua mensagem"></textarea>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-outline-info w-25" (click)="inserirMensagem()">Publicar</button>
+                </div>
+
+                <hr class="mt-5 mb-5">
+
+                <h3 class="text-center mb-5 text-monospace">comentários adicionados</h3>
+                <div class="container">
+                    <div class="card mb-4" *ngFor="let post of listPost">
+                        <div class="card-header">
+                            <h5 class="card-title">{{post.id}}</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{post.nome}}</p>
+                            <p class="card-text">{{post.mensagem}}</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

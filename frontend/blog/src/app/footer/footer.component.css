@@ -1,0 +1,33 @@
+.social-network {
+    list-style: none;
+    display: inline;
+    padding: 0;
+}
+
+.social-network > li {
+    display: inline;
+    padding: 10px;
+    margin: 0;
+    font-size: 35px;
+}
+
+.icoGithub {
+    color: black;
+}
+
+.icoInstagram {
+    color: #c13584;
+}
+
+.icoLinkedin {
+    color: #0072b1;
+}
+
+.icoGithub:hover, .icoInstagram:hover, .icoLinkedin:hover {
+    color: white;
+}
+
+.footer-copyright > a {
+    text-decoration: none;
+    font-weight: bold;
+}

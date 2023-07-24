@@ -17,4 +17,8 @@ export class PostService {
   postMensagem(post: Post): Observable<Post>{
     return this.http.post<Post>('http://localhost:3000/posts', post)
   }
+
+  buscarPost(nome: string): Observable<Post[]>{
+    return this.http.get<Post[]>(`http://localhost:3000/posts?nome=${nome}`)
+  }
 }

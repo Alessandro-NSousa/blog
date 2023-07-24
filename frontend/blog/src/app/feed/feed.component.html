@@ -12,9 +12,9 @@
                     <fa-icon [icon]="github"></fa-icon>
                   </a>
                   <hr class="mt-4 mb-4">
-                  <h6 class="mb-3 text-monospace text-center">Pesquisar por Título</h6>
-                  <input class="form-control mb-3 w-100" type="text">
-                  <button class="btn btn-outline-warning w-100">Pesquisar</button>               
+                  <h6 class="mb-3 text-monospace text-center">Pesquisar por nome</h6>
+                  <input class="form-control mb-3 w-100" type="text" id="nomeBusca" [(ngModel)]="nomeBusca">
+                  <button class="btn btn-outline-warning w-100" (click)="buscarPub()">Pesquisar</button>               
                 </div>
               </div> 
         </div>

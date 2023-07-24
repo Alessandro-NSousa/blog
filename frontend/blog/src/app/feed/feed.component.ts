@@ -12,6 +12,7 @@ export class FeedComponent implements OnInit {
 
   listPost: Post[] | undefined;
   post: Post = new Post;
+  nomeBusca: string = '';
   constructor(private postService: PostService){
     
   }
@@ -32,6 +33,13 @@ export class FeedComponent implements OnInit {
     this.postService.postMensagem(this.post).subscribe((data: Post)=> {
       this.post = data;
       location.assign('/feed')
+    })
+  }
+
+  buscarPub(){
+    this.postService.buscarPost(this.nomeBusca).subscribe((data: Post[])=> {
+      this.listPost = data;
+      
     })
   }
 
